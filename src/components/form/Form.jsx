@@ -6,7 +6,7 @@ function Form({addUser}) {
 
   const user = {
       id: uuidv4(),
-      image: '/src/assets/images/image.jpg',
+      image: '',
       date: ''
   }
   const [url, setUrl] = useState('')
@@ -23,7 +23,7 @@ function Form({addUser}) {
     e.preventDefault()
     addUser({
       ...user,
-      image: url ? url : '/src/assets/images/image.jpg',
+      image: url ? url : '/dist/image.jpg',
       date: date
     })
     setUrl('')
